@@ -1,0 +1,33 @@
+@use "./colors.module.scss" as *;
+
+.sectionBackground{
+    background-image: linear-gradient(to bottom, #111, #111, transparent);
+    position: relative;
+    height: 600px;
+}
+
+.videoBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* faz o vídeo cobrir toda a tela */
+    z-index: -1; 
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 40px;
+        animation: arrow alternate infinite 1s;
+        @keyframes arrow {
+            to{
+                transform: translateY(-30px);
+            }
+        }
+    }
+}

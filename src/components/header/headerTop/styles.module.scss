@@ -1,0 +1,36 @@
+@use "../../../app/colors.module.scss" as *;
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111;
+
+    nav{
+        ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+
+            li{
+                border: 1px solid #ccc;
+                padding: 5px 8px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: .5s ease;
+
+                &:hover{
+                    color: $mainColor ;
+                    border-color: $mainColor;
+                }
+            }
+
+        }
+    }
+}
+
+.logoContainer{
+    width: 200px;
+
+}

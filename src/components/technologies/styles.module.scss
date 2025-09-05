@@ -1,0 +1,90 @@
+@use "../../app/colors.module.scss" as * ;
+
+.sectionContainer{
+    padding: 30px 20px ;
+
+    h2{
+        margin-bottom: 40px;
+    }
+}
+
+.containerTechs{
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 340px;
+    height: 280px;
+    border-radius: 8px;
+    padding: 14px ;
+    background-size: cover;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    .cardTitle{
+        transition: .5s ease;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .cardDescription{
+        font-size: 15px;
+        color: $colorText;
+    }
+
+    	&:hover {
+    transform: scale(1.03);
+    .cardTitle {
+      font-size: 18px;
+      margin-left: 8px;
+    }
+}
+}
+
+
+.card1{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://kinsta.com/pt/wp-content/uploads/sites/3/2023/06/install-react.jpg") ;
+}
+
+.card2{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent) , url("https://wearedevelopers.imgix.net/magazine/articles/554/images/hero/odPaQHSbArSIFzZbUzlE-1740483365.jpeg?w=720&auto=compress,format");
+    position: center;
+}
+
+.card3{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://uploads.teachablecdn.com/attachments/0dKhU49vRbiSSWknbHAR_1920X1357.jpg") ;
+}
+
+.card4{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzSUM8bHHlBii_AXAeX7f7-pOS_2iv6-PwYg&s") ;
+    background-position: center center;
+    background-size:contain ;
+}
+
+.card5{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRv3PGEyeJbr65Z2XC-eBGIJvQdtpg0L7XkA&s") ;
+     background-position: center center;
+    background-size:contain ;
+}
+
+.card6{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://storage.googleapis.com/star-lab/blog/OGs/javascript.png") ;
+    background-position: center center;
+}
+
+.card7{
+    @extend .card;
+    background-image: linear-gradient(to top , #111, transparent), url("https://miro.medium.com/0*VLLYS8MznQJXq-1_.jpg") ;
+     background-position: center center;
+    background-size:contain ;
+}
