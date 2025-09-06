@@ -1,0 +1,90 @@
+@use "../../app/colors.module.scss" as * ;
+
+.footer{
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid $secondBgColor;
+
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        color: #9CA3AF;
+    }
+}
+
+.containerInfo{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px ;
+    border-bottom: 2px solid $secondBgColor;
+}
+
+.containerTitle{
+    h2{
+        padding-bottom: 10px;
+
+        span{
+            color: $mainColor;
+        }
+    }
+
+    
+}
+
+.containerButtons{
+    ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 10px;
+    }
+}
+
+.btn{
+    border: 1px solid $secondBgColor;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease ;
+
+    &:hover{
+        color: $colorPrimary;
+    }
+}
+
+.containerContacts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 0 20px;
+
+}
+
+.contacts{
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        list-style: none;
+        margin-right: 80px;
+
+        li{
+            font-size: 27px;
+            cursor: pointer;
+            a{
+                color: $colorPrimary;
+
+                &:hover{
+                    color: $mainColor;
+                    filter: drop-shadow(0 0 3px $mainColor);
+                }
+
+            }
+        }
+    }
+}

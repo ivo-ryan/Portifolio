@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 5%;
 }
 
 .headerTitle{
@@ -21,6 +22,7 @@
 .description{
     width: 70%;
     font-size: 20px;
+    padding-bottom: 10px;
 }
 
 .subTitle{
@@ -33,16 +35,57 @@
     padding-top: 1rem;
 }
 
+.containerContact{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     text-decoration: none;
-    background-color: $mainColor;
     padding: 8px 14px;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 5px;
-    color: $bgColor;
+    color: $colorText;
     transition: .5s ease;
+    text-decoration: none;
+
+    svg{
+        font-size: 20px;
+    }
+}
+
+.btnLinkedin{
+    @extend .btn;
+    background-color: #0A66C2;
 
     &:hover{
-        filter: drop-shadow( 0 0 5px $mainColor);
+        background-color: #004182;
     }
+    
+}
+
+.btnWhatsapp{
+    @extend .btn;
+    background-color: #16A34A;
+
+    &:hover{
+        background-color: #15803D;
+    }
+    
+}
+
+.btnGithub{
+    @extend .btn;
+    background-color: #181717;
+    border: 1px solid #fff;
+
+    &:hover{
+        background-color: #fff;
+        color: #181717;
+    }
+    
 }

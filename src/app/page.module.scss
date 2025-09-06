@@ -1,6 +1,6 @@
 @use "./colors.module.scss" as *;
 
-.sectionBackground{
+.mainBackground{
     background-image: linear-gradient(to bottom, #111, #111, transparent);
     position: relative;
     height: 600px;

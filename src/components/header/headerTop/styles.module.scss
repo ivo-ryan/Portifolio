@@ -2,31 +2,51 @@
 
 .container{
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
     padding: 20px;
     background-color: #111;
+}
 
-    nav{
-        ul{
-            display: flex;
-            gap: 20px;
-            list-style: none;
+.navContainer{
+    display: flex;
+    gap: 20px;
+    list-style: none;
 
-            li{
-                border: 1px solid #ccc;
-                padding: 5px 8px;
-                border-radius: 6px;
-                cursor: pointer;
-                transition: .5s ease;
-
-                &:hover{
-                    color: $mainColor ;
-                    border-color: $mainColor;
-                }
-            }
+        li{
+            padding: 5px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .5s ease;
 
         }
+}
+
+.btn{
+    &:hover{
+        color: $colorPrimary ;
+    }
+}
+
+.btnIA{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $colorPrimary;
+
+    &:hover{
+        background-color: #594DCC;
+    }
+    
+}
+
+.title{
+    span{
+        color: $mainColor;
+        filter: drop-shadow(0 0 4px $mainColor);
     }
 }
 

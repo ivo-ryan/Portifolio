@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 export default function Technologies() {
     return (
         <section className={styles.sectionContainer}>
-            <h2>Tecnologias Utilizadas</h2>
+            <h2>Principais Tecnologias </h2>
 
             <div className={styles.containerTechs}>
                 <div className={styles.card1}>
