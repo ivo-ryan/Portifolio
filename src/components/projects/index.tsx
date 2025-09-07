@@ -17,8 +17,7 @@ const SplideSlide = dynamic(
 );
 
 export default function Projects (){
-    let slideCount = 0
-    const series = [1, 2, 4]
+
     return (
         <section>
 
@@ -29,31 +28,33 @@ export default function Projects (){
                 <Splide 
                     options={{
                             type: "loop",
-                            perPage: slideCount,
+                            perPage: 4,
                             perMove: 1,
-                            width: slideCount * 300,
+                            width: 1200,
                             pagination: false,
-                            arrows: series.length > 4 ? true : false,
-                            drag: series.length > 4 ? true : false,
+                            arrows: true,
+                            drag: true,
                             breakpoints: {
                                 1200: {
-                                perPage: slideCount >= 2 ? 2 : 1,
-                                width: slideCount >= 2 ? 600 : 300,
-                                arrows: series.length > 2 ? true : false,
-                                drag: series.length > 2 ? true : false
+                                perPage: 3,
+                                width: 800
                                 },
                                 600: {
                                 perPage: 1,
-                                width: 300,
-                                arrows: series.length > 1 ? true : false,
-                                drag: series.length > 1 ? true : false,
+                                width: 300
                                 }
                             }
                             }}
                 >
 
                     <SplideSlide>
-
+                            <div className={styles.slide}>
+                                <img src="" alt="" />
+                                <div className={styles.info}>
+                                    <h2></h2>
+                                    <p></p>
+                                </div>
+                            </div>
                     </SplideSlide>
 
                 </Splide>
