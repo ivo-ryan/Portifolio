@@ -16,7 +16,8 @@ const SplideSlide = dynamic(
   { ssr: false }
 );
 
-export default function Projects (){
+export default  function Projects (){
+
 
     return (
         <section>
@@ -49,7 +50,7 @@ export default function Projects (){
 
                     <SplideSlide>
                             <div className={styles.slide}>
-                                <img src="" alt="" />
+                                
                                 <div className={styles.info}>
                                     <h2></h2>
                                     <p></p>
