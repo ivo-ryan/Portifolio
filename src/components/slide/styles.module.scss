@@ -1,0 +1,27 @@
+@use "../../app/colors.module.scss" as *;
+
+.containerProject{
+    width: 320px;
+    height: 328px;
+    border: 1px solid $secondBgColor;
+    background-color: $bgColor;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+.description {
+  font-size: 14px;
+  padding: 0px 16px;
+  color: $colorText;
+}
+
+
+.slideImg{
+    width: 100%;
+}

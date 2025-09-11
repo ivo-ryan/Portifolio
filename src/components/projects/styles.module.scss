@@ -1,5 +1,17 @@
 .containerSlides{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
 
+.sectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 500px ;
+
+    h2{
+        padding: 0 30px;
+    }
 }

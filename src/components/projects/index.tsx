@@ -2,10 +2,10 @@
 
 import dynamic from "next/dynamic";
 import styles from "./styles.module.scss";
-// import { Splide, SplideSlide } from "splide-nextjs/react-splide";
 import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
+import Slide from "../slide";
+import { ProjectsProps } from "@/services/projectsService";
 
-// Importa dinamicamente
 const Splide = dynamic(
   () => import("splide-nextjs/react-splide").then(mod => mod.Splide),
   { ssr: false }
@@ -16,13 +16,17 @@ const SplideSlide = dynamic(
   { ssr: false }
 );
 
-export default  function Projects (){
+interface props  {
+    projects: ProjectsProps[]
+}
 
+export default  function Projects ({ projects }: props ){
+    
 
     return (
-        <section>
+        <section className={styles.sectionContainer}>
 
-            <h2>Projetos </h2>
+            <h2>Projetos</h2>
 
             <div className={styles.containerSlides}>
 
@@ -31,7 +35,7 @@ export default  function Projects (){
                             type: "loop",
                             perPage: 4,
                             perMove: 1,
-                            width: 1200,
+                            width: 1350,
                             pagination: false,
                             arrows: true,
                             drag: true,
@@ -48,15 +52,16 @@ export default  function Projects (){
                             }}
                 >
 
-                    <SplideSlide>
-                            <div className={styles.slide}>
-                                
-                                <div className={styles.info}>
-                                    <h2></h2>
-                                    <p></p>
-                                </div>
-                            </div>
-                    </SplideSlide>
+                    {
+
+                        projects?.map(item => (
+                            <SplideSlide key={item.id} >
+                                <Slide project={item} />
+                            </SplideSlide>
+                        ))
+
+                    }
+
 
                 </Splide>
             </div>
