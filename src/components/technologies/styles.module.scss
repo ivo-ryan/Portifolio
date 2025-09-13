@@ -15,34 +15,59 @@
     flex-wrap: wrap;
 }
 
+
 .card{
     width: 340px;
     height: 280px;
-    border-radius: 8px;
     padding: 14px ;
-    background-image: linear-gradient(to top , #111);
-    background-position: center center;
-    background-size: cover;
     display: flex ;
     flex-direction: column;
     justify-content: flex-end;
+    position: relative;
+    transition: .5s ease;
     
-    .cardTitle{
-        transition: .5s ease;
+    &:hover {
+        transform: scale(1.03);
+        .cardTitle {
+            font-size: 18px;
+            margin-left: 8px;
+        }
+    }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, #111, transparent);
+        border-radius: 8px;
+        z-index: -1;
+        pointer-events: none; 
+    }
+    
+}
+
+
+.imgBackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+}
+
+
+.cardTitle{
         font-weight: bold;
         margin-bottom: 8px;
     }
 
-    .cardDescription{
-        font-size: 15px;
-        color: $colorText;
-    }
 
-    	&:hover {
-    transform: scale(1.03);
-    .cardTitle {
-      font-size: 18px;
-      margin-left: 8px;
-    }
-}
+.cardDescription{
+    font-size: 15px;
+    font-weight: 400;
+    color: $colorText;
 }

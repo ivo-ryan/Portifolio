@@ -1,6 +1,5 @@
 import { TechsTypes } from "@/services/techsService";
 import styles from "./styles.module.scss";
-import { url } from "inspector";
 
 interface props {
     techs: TechsTypes[];
@@ -14,7 +13,8 @@ export default function Technologies({ techs }: props) {
             <div className={styles.containerTechs}>
                 {
                     techs.map(item => (
-                    <div className={styles.card} key={item.id} style={{ backgroundImage:`linear-gradient( #111, transparent) url(${item.imgUrl}) `}}>
+                    <div className={styles.card} key={item.id} >
+                        <div className={styles.imgBackground} style={{ backgroundImage:`url(${item.imgUrl}) `}} ></div>
                         <h2 className={styles.title}>{item.name}</h2>
                         <p className={styles.description}>
                             {item.description}

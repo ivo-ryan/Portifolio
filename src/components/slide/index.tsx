@@ -8,12 +8,16 @@ interface props  {
 
 export default function Slide ({ project }:props) {
 
+    const limitarTexto = (texto: string, limite : number) => {
+    return texto.length > limite ? texto.substring(0, limite) + "..." : texto;
+    }
+
     return (
 
             <div className={styles.containerProject} >
                 <img src={project.imgUrl} alt={project.name} className={styles.slideImg}/>
                 <h2 className={styles.title}>{project.name}</h2>
-                <p className={styles.description}>{project.description}</p>
+                <p className={styles.description}>{limitarTexto(project.description, 150)}</p>
             </div>
     )
 }
