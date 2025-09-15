@@ -33,7 +33,7 @@ export default  function Projects ({ projects }: props ){
                 <Splide 
                     options={{
                             type: "loop",
-                            perPage: 4,
+                            perPage: 1,
                             perMove: 1,
                             width: 1350,
                             pagination: false,
@@ -41,11 +41,9 @@ export default  function Projects ({ projects }: props ){
                             drag: true,
                             breakpoints: {
                                 1200: {
-                                perPage: 3,
                                 width: 800
                                 },
                                 600: {
-                                perPage: 1,
                                 width: 300
                                 }
                             }

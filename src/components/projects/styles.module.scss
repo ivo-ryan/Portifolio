@@ -1,3 +1,5 @@
+@use "../../app/colors.module.scss" as *;
+
 .containerSlides{
     display: flex;
     align-items: center;
@@ -8,8 +10,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    background-color: #1f242dc9;
     gap: 20px;
     height: 500px ;
+    margin-bottom: 40px;
 
     h2{
         padding: 0 30px;

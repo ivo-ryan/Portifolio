@@ -7,6 +7,8 @@ export type ProjectsProps = {
     imgUrl:string;
     name: string;
     vercelUrl:string;
+    technologies: string;
+    gitUrl: string;
 }
 
 export const projectsService = {

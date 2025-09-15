@@ -89,3 +89,10 @@
     }
     
 }
+.btnCv {
+    @extend .btn ;
+    background-color: #2563EB;
+    &:hover{
+        background-color: #1E40AF ;
+    }
+}

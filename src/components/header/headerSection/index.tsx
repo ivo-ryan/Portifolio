@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaFileAlt, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export default function HeaderSection (){
     return (
@@ -36,6 +36,11 @@ export default function HeaderSection (){
                         >
                             <FaGithub/>
                             GitHub
+                        </Link>
+
+                        <Link href='' className={styles.btnCv}>
+                            <FaFileAlt/>
+                            Baixar CV
                         </Link>
                     
                     </div>    
