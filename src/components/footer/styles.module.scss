@@ -50,10 +50,18 @@
     border-radius: 4px;
     cursor: pointer;
     transition: .5s ease ;
-
-    &:hover{
-        color: $colorPrimary;
+    
+    a{
+        color: #fff;
+        text-decoration: none;
     }
+    
+    &:hover{
+        a{
+            color: $colorPrimary;
+        }
+    }
+
 }
 
 .containerContacts{

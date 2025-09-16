@@ -16,18 +16,3 @@
     z-index: -1; 
 }
 
-.arrow{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img{
-        width: 40px;
-        animation: arrow alternate infinite 1s;
-        @keyframes arrow {
-            to{
-                transform: translateY(-30px);
-            }
-        }
-    }
-}

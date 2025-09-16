@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 main{
   min-height: 100vh;
   color: $colorText;

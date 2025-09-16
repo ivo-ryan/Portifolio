@@ -96,3 +96,60 @@
         background-color: #1E40AF ;
     }
 }
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    img{
+        width: 40px;
+        animation: arrow alternate infinite 1s;
+        @keyframes arrow {
+            to{
+                transform: translateY(-30px);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .imgPresentation{
+        width: 300px;
+    }
+    .headerTitle{
+        width: 40%;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+    .description{
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .btn{
+        font-size: 14px;
+    }
+
+    .containerContact{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1000px) {
+    .headerSection{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .headerTitle{
+        width: 70%;
+        margin-top: 10%;
+    }
+
+    .imgPresentation{
+        width: 500px;
+    }
+}

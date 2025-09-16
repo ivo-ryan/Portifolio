@@ -15,11 +15,10 @@ export default async function Home() {
   return (
     <>
       <main className={styles.mainBackground}>
-          <Header/>
+          <Header />
 
           <video src="/video.mp4" autoPlay muted loop className={styles.videoBackground}></video>
           <HeaderSection/>
-          <div className={styles.arrow}><img src="/iconArrowDown.svg" alt="Arrow" /></div>
           <Technologies techs={techs} />
           <Projects projects={projects} />
 

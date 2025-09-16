@@ -107,3 +107,29 @@
     transform: rotate(-90deg);
   }
 }
+
+@media (max-width: 1200px) {
+  .containerProject{
+    margin-left: 50px;
+    padding: 0 10px;
+  }
+
+  .containerImg{
+    width: 400px;
+  }
+
+  .containerInfo{
+    padding: 10px 0;
+    width: 350px;
+  }
+  .title{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px){
+  .containerProject{
+    flex-direction: column;
+    height: 450px;
+  }
+}

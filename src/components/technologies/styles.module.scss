@@ -9,7 +9,7 @@
 }
 
 .containerTechs{
-
+    width: 100%;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -70,4 +70,20 @@
     font-size: 15px;
     font-weight: 400;
     color: $colorText;
+}
+
+@media (max-width: 1200px) {
+    .sectionContainer{
+        width: 100%;
+    }
+
+    .card{
+        width: 320px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card{
+        width: 350px;
+    }
 }

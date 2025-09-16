@@ -24,7 +24,7 @@ export default  function Projects ({ projects }: props ){
     
 
     return (
-        <section className={styles.sectionContainer}>
+        <section className={styles.sectionContainer} id="projetos" >
 
             <h2>Projetos</h2>
 
@@ -41,10 +41,10 @@ export default  function Projects ({ projects }: props ){
                             drag: true,
                             breakpoints: {
                                 1200: {
-                                width: 800
+                                width: 1000
                                 },
-                                600: {
-                                width: 300
+                                1000: {
+                                width: 600
                                 }
                             }
                             }}

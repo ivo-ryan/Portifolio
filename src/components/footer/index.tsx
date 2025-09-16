@@ -13,8 +13,8 @@ export default function Footer (){
 
                 <div className={styles.containerButtons}>
                     <ul>
-                        <li className={styles.btn}>Home</li>
-                        <li className={styles.btn}>Projetos</li>
+                        <li className={styles.btn}><Link href="#home">Home</Link></li>
+                        <li className={styles.btn}><Link href="#projetos">Projetos</Link></li>
                         <li className={styles.btn}>Contato</li>
                     </ul>
                 </div>

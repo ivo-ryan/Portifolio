@@ -47,6 +47,8 @@ export default function HeaderSection (){
                 </div>
                 <img src="/imgPresentation.png" alt="" className={styles.imgPresentation}/>
             </div>
+
+             <div className={styles.arrow}><img src="/iconArrowDown.svg" alt="Arrow" /></div>
         </>
     )
 }
