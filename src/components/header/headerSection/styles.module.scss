@@ -142,11 +142,11 @@
     .headerSection{
         flex-direction: column;
         gap: 20px;
+        padding-top: 14%;
     }
 
     .headerTitle{
         width: 70%;
-        margin-top: 10%;
     }
 
     .imgPresentation{
@@ -155,7 +155,24 @@
 }
 
 @media (max-width: 500px) {
+    .headerSection{
+        padding-top: 25%;
+    }
+
     .headerTitle{
         width: 90%;
+    }
+}
+
+@media(max-width: 400px){
+    .headerSection{
+        padding: 28% 10px 0 20px;
+    }
+    .headerTitle{
+        width: 98%;
+    }
+
+    .description{
+        width: 98%;
     }
 }
