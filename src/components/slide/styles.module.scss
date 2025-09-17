@@ -8,8 +8,8 @@
 
 .containerProject{
     @extend .displayF;
-    justify-content: space-around;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
     width: 90%;
     height: 350px;
     border: 1px solid $secondBgColor;
@@ -33,8 +33,19 @@
 .containerImg{
   @extend .displayF;
     width: 500px;
-    min-height: 400px;
+    height: 250px;
     filter: drop-shadow(0 0 4px #111);
+}
+
+.slideImg{
+    width: 100%;
+    height: 250px;
+}
+
+
+.container{
+  @extend .displayF;
+  gap: 20px
 }
 
 .containerInfo{
@@ -42,14 +53,10 @@
   flex-direction: column;
   background-color: #15151571;
   padding: 20px 0;
+  height: 250px;
   gap: 20px;
-  width: 400px;
+  width: 40%;
   box-shadow: (0 0 4px #111);
-}
-
-
-.slideImg{
-    width: 100%;
 }
 
 .btn{
@@ -89,7 +96,8 @@
 
 .links{
   @extend .displayF;
-  flex-direction: column;
+  justify-content: flex-end;
+  width: 63%;
   gap: 20px
 }
 
@@ -117,6 +125,9 @@
   .containerImg{
     width: 400px;
   }
+  .links{
+    width: 75%;
+  }
 
   .containerInfo{
     padding: 10px 0;
@@ -129,7 +140,107 @@
 
 @media (max-width: 1000px){
   .containerProject{
+    padding: 10px 0;
+    margin-left: 90px;
+    height: 460px;
+    width: 70%;
+    border-radius: 5px;
+  }
+
+  .container{
     flex-direction: column;
-    height: 450px;
+    gap: 10px;
+  }
+
+  .containerImg{
+    height: 180px;
+  }
+
+  .slideImg{
+    height: 170px;
+  }
+
+  .containerInfo{
+    width: 95%;
+    height: 190px;
+    gap: 8px;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .description{
+    font-size: 14px;
+  }
+
+  .links{
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+  }
+  .techs {
+    p{
+      font-size: 14px;
+      padding: 5px 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .containerProject{
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .containerImg{
+    width: 98%;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  .containerProject{
+    margin-left: 15px;
+    font-weight: 500;
+  }
+
+  .slideImg{
+    height: 160px;
+  }
+
+  .containerInfo{
+    height: 200px;
+  }
+
+  .title{
+    font-size: 16px;
+  }
+
+  .description{
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .techs{
+
+    span{
+      font-size: 14px;
+    }
+     
+    p{
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  
+  .btn{
+    padding: 5px;
+    font-size: 14px;
+
+    svg{
+      font-size: 15px;
+    }
   }
 }

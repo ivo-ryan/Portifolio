@@ -8,7 +8,7 @@ interface props {
 export default function Technologies({ techs }: props) {
     return (
         <section className={styles.sectionContainer}>
-            <h2>Principais Tecnologias </h2>
+            <h2 className={styles.titlePage}>Principais Tecnologias </h2>
 
             <div className={styles.containerTechs}>
                 {

@@ -96,3 +96,21 @@
         }
     }
 }
+
+@media (max-width: 500) {
+    .containerInfo{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .containerContacts{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        ul{
+            margin-right: 0;
+        }
+    }
+}

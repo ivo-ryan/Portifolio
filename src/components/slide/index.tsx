@@ -17,16 +17,19 @@ export default function Slide ({ project }:props) {
     return (
 
             <div className={styles.containerProject} >
-                <div className={styles.containerImg}>
-                    <img src={project.imgUrl} alt={project.name} className={styles.slideImg}/>
-                </div>
+                <div className={styles.container}>
 
-                <div className={styles.containerInfo}>
-                    <h2 className={styles.title}>{project.name}</h2>
+                    <div className={styles.containerImg}>
+                        <img src={project.imgUrl} alt={project.name} className={styles.slideImg}/>
+                    </div>
+
+                    <div className={styles.containerInfo}>
+                        <h2 className={styles.title}>{project.name}</h2>
                     <p className={styles.description}>{limitarTexto(project.description, 150)}</p>
                     <div className={styles.techs}>
                         <span>Tecnologias utilizadas:</span>
                         <p>{project.technologies}</p>
+                    </div>
                     </div>
                 </div>
 

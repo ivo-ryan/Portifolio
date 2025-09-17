@@ -45,6 +45,13 @@ export default  function Projects ({ projects }: props ){
                                 },
                                 1000: {
                                 width: 600
+                                },
+                                600: {
+                                    width: 400
+                                },
+
+                                400: {
+                                    width: 300
                                 }
                             }
                             }}

@@ -1,4 +1,4 @@
-import { FaCommentDots } from 'react-icons/fa';
+
 import styles from './styles.module.scss';
 import Link from 'next/link';
 
@@ -13,7 +13,6 @@ export default function Header(){
                     <ul className={styles.navContainer}>
                         <li className={styles.btn}><Link href="#header">Home</Link></li>
                         <li className={styles.btn}><Link href="#projetos">Projetos</Link></li>
-                        <li className={styles.btnIA}><FaCommentDots/> Fale com a IA</li>
                     </ul>
                 </nav>
 
