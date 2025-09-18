@@ -2,13 +2,12 @@
 
 .mainBackground{
     background-image: linear-gradient(to bottom, #111, #111, transparent);
-    height: 600px ;
+    height: 100vh;
+    position: relative;
 }
 
 body{
-    height: 100vh;
-    background: #111;
-    position: relative;
+    background-image: linear-gradient(to top , #111, #111, transparent);
 }
 
 .videoBackground{
@@ -17,7 +16,7 @@ body{
     left: 0;
     width: 100%;
     min-height: 100vh;
-    object-fit: cover; /* faz o vídeo cobrir toda a tela */
+    object-fit: cover; 
     z-index: -1; 
 }
 
