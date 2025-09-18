@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh !important;
     background: #111;
     position: relative;
 }
@@ -16,7 +16,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh !important;
+    height: 100%;
     object-fit: cover; /* faz o vídeo cobrir toda a tela */
     z-index: -1; 
 }
