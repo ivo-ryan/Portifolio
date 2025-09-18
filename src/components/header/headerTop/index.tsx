@@ -3,8 +3,7 @@ import styles from './styles.module.scss';
 import Link from 'next/link';
 
 export default function Header(){
-    return (
-        <>
+    return (       
             <header className={styles.container} id='header' >
                 <div className={styles.logoContainer}>
                     <h1 className={styles.title}><span>IR</span>.DEV</h1>
@@ -15,8 +14,6 @@ export default function Header(){
                         <li className={styles.btn}><Link href="#projetos">Projetos</Link></li>
                     </ul>
                 </nav>
-
-            </header>
-        </>
+            </header>       
     )
 }

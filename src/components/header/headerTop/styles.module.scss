@@ -26,22 +26,20 @@
 }
 
 .btn{
-    &:hover{
-        color: $colorPrimary ;
+    a{
+        text-decoration: none;
+        color: $colorText;
     }
+
+   &:hover{
+        a{
+            color: #594DCC;
+        }
+    }
+
+
 }
 
-.btnIA{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: $colorPrimary;
-
-    &:hover{
-        background-color: #594DCC;
-    }
-    
-}
 
 .title{
     span{
