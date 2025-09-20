@@ -59,9 +59,9 @@ export default  function Projects ({ projects }: props ){
 
                     {
 
-                        projects?.map(item => (
-                            <SplideSlide key={item.id} >
-                                <Slide project={item}  key={item.id}/>
+                        projects?.map((item , index) => (
+                            <SplideSlide key={index} >
+                                <Slide project={item} />
                             </SplideSlide>
                         ))
 
