@@ -10,14 +10,14 @@
 
 .containerTechs{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px , 1fr));
     gap: 10px;
     flex-wrap: wrap;
 }
 
 
 .card{
-    width: 340px;
     height: 280px;
     padding: 14px ;
     display: flex ;
@@ -67,29 +67,18 @@
     }
 
 
-.cardDescription{
+.description{
     font-size: 15px;
     font-weight: 400;
     color: $colorText;
 }
 
-@media (max-width: 1200px) {
-    .sectionContainer{
-        width: 100%;
-    }
-
-    .card{
-        width: 320px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .card{
-        width: 350px;
-    }
-}
 
 @media (max-width: 500px) {
+    .containerTechs{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
     .card{
         height: 200px;
         justify-content: flex-start;
@@ -100,12 +89,27 @@
     }
 
     .title{
+        font-size: 20px;
         padding-bottom: 25px;
+    }
+
+    .description{
+        display: none;
     }
 }
 
 @media (max-width: 350px){
+    .containerTechs{
+        gap:5px;
+    }
     .title{
         padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 320px){
+
+    .containerTechs{
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     }
 }

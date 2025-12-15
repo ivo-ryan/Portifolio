@@ -15,7 +15,8 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "sass": "^1.92.0",
-    "splide-nextjs": "^2.4.23"
+    "splide-nextjs": "^2.4.23",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

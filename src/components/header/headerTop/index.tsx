@@ -12,6 +12,7 @@ export default function Header(){
                     <ul className={styles.navContainer}>
                         <li className={styles.btn}><Link href="#header">Home</Link></li>
                         <li className={styles.btn}><Link href="#projetos">Projetos</Link></li>
+                        <li className={styles.btn}><Link href={"#about"}>About</Link></li>
                     </ul>
                 </nav>
             </header>       

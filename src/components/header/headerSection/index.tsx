@@ -38,14 +38,18 @@ export default function HeaderSection (){
                             GitHub
                         </Link>
 
-                        <Link href='' className={styles.btnCv}>
+                        <Link className={styles.btnCv}  href="/curriculo-ivo-ryan.pdf"
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
                             <FaFileAlt/>
                             Baixar CV
                         </Link>
                     
                     </div>    
                 </div>
-                <img src="/imgPresentation.png" alt="" className={styles.imgPresentation}/>
+                <img src="/imgpresentation.png" alt="" className={styles.imgPresentation}/>
             </div>
 
              <div className={styles.arrow}><img src="/iconArrowDown.svg" alt="Arrow" /></div>

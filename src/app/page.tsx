@@ -7,6 +7,7 @@ import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import { projectsService } from "@/services/projectsService";
 import { techService } from "@/services/techsService";
+import About from "@/components/about";
 
 export default async function Home() {
   const projects = await projectsService.projectsAll();
@@ -15,10 +16,13 @@ export default async function Home() {
   return (
     <>
       <main className={styles.mainBackground}>
-          <Header />
+          <div className={styles.containerHeader}>
+            <Header />
+            <video src="/video.mp4" autoPlay muted loop className={styles.videoBackground}></video>
+            <HeaderSection/>          
+          </div>
 
-          <video src="/video.mp4" autoPlay muted loop className={styles.videoBackground}></video>
-          <HeaderSection/>
+          <About/>
           <Technologies techs={techs} />
           <Projects projects={projects} />
 

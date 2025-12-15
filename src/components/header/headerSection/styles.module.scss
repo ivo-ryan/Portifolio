@@ -33,6 +33,9 @@
 .imgPresentation{
     width: 600px;
     padding-top: 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid $colorAccent;
 }
 
 .containerContact{
