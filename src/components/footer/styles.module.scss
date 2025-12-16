@@ -82,14 +82,46 @@
         margin-right: 80px;
 
         li{
+            border: none;
+        }
+
+        .btnSvg{
             font-size: 27px;
             cursor: pointer;
-            a{
-                color: $colorPrimary;
+            transition: all .5s ease;
+           a{
+             svg{
+                background-color: $textColor ;
+                border-radius: 5px;
+             }
+           }
+        }
+
+        .linkedin{
+            @extend .btnSvg;
+             a{
+                color: #0A66C2
+;
 
                 &:hover{
-                    color: $mainColor;
-                    filter: drop-shadow(0 0 3px $mainColor);
+                    color: #1B7BD8;
+                }
+
+            }
+        }
+
+        .github{
+            @extend .btnSvg;
+             a{
+                color: #181717
+;
+
+                &:hover{
+                    color: #2F2F2F;
+                }
+
+                svg{
+                    border-radius: 50%;
                 }
 
             }

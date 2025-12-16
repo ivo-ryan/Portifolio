@@ -15,7 +15,7 @@ export default function Footer (){
                     <ul>
                         <li className={styles.btn}><Link href="#home">Home</Link></li>
                         <li className={styles.btn}><Link href="#projetos">Projetos</Link></li>
-                        <li className={styles.btn}>Contato</li>
+                        <li className={styles.btn}><Link href="#about">About</Link></li>
                     </ul>
                 </div>
 
@@ -26,23 +26,18 @@ export default function Footer (){
 
                 <div className={styles.contacts}>
                     <ul>
-                        <li>
+                        <li className={styles.linkedin}>
                             <Link href="https://www.linkedin.com/in/ryan-bastos-a0a8262a7/" target='_blank'>
                                 <FaLinkedin/>
                             </Link>
                         </li>
 
-                        <li>
+                        <li className={styles.github}>
                             <Link href="https://github.com/ivo-ryan" target='_blank'>
                                 <FaGithub/>                            
                             </Link>
                         </li>
 
-                        <li>
-                            <Link href="https://t.me/ivo_ryan" target='_blank'>
-                                <FaTelegram/>                            
-                            </Link>
-                        </li>
                     </ul>
                 </div>
             </div>

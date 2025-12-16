@@ -1,30 +1,48 @@
-import { TechsTypes } from "@/services/techsService";
 import styles from "./styles.module.scss";
 
-interface props {
-    techs: TechsTypes[];
-}
 
-export default function Technologies({ techs }: props) {
+export default function Technologies() {
+
     return (
-        <section className={styles.sectionContainer}>
-            <h2 className={styles.titlePage}>Principais Tecnologias </h2>
+        <section className={styles.tech} >
+            <h2>Tecnologias</h2>
 
-            <div className={styles.containerTechs}>
-                {
-                    techs.map(item => (
-                    <div className={styles.card} key={item.id} >
-                        <div className={styles.imgBackground} style={{ backgroundImage:`url(${item.imgUrl}) `}} ></div>
-                        <h2 className={styles.title}>{item.name}</h2>
-                        <p className={styles.description}>
-                            {item.description}
-                        </p>
-                    </div>
-                    ))
-                }
-          
+            <div className={styles.techGroup}>
+                <h3>Front-end</h3>
+                <div className={styles.techList}>
+                <span>React</span>
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>SCSS</span>
+                </div>
             </div>
-            
+
+            <div className={styles.techGroup}>
+                <h3>Back-end</h3>
+                <div className={styles.techList} >
+                <span>Node.js</span>
+                <span>REST API</span>
+                <span>Prisma ORM</span>
+                </div>
+            </div>
+
+            <div className={styles.techGroup}>
+                <h3>Banco de Dados</h3>
+                <div className={styles.techList}>
+                <span>PostgreSQL</span>
+                </div>
+            </div>
+
+            <div className={styles.techGroup}>
+                <h3>Testes & Ferramentas</h3>
+                <div className={styles.techList}>
+                <span>Vitest</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                </div>
+            </div>
         </section>
+
     )
 }

@@ -9,7 +9,10 @@ export default function HeaderSection (){
                 <div className={styles.headerTitle}>
                     <h2 className={styles.subTitle}>Quem sou eu</h2>
                     <h1 className={styles.title} >Desenvolvedor Full Stack JavaScript</h1>
-                    <p className={styles.description}>Desenvolvedor Full Stack JavaScript em início de carreira, com sólida base em React, Next.js, Node.js, PostgreSQL e Prisma.</p>  
+                    <p className={styles.description}>
+                        Desenvolvedor Full Stack focado em aplicações web modernas.
+                        Experiência prática com React, Next.js, Node.js, PostgreSQL e testes automatizados.
+                    </p>  
                     <div className={styles.containerContact}>
                         <Link 
                         href="https://www.linkedin.com/in/ryan-bastos-a0a8262a7/" 

@@ -6,12 +6,10 @@ import Technologies from "@/components/technologies";
 import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import { projectsService } from "@/services/projectsService";
-import { techService } from "@/services/techsService";
 import About from "@/components/about";
 
 export default async function Home() {
   const projects = await projectsService.projectsAll();
-  const techs = await techService.getTechs();
 
   return (
     <>
@@ -23,7 +21,7 @@ export default async function Home() {
           </div>
 
           <About/>
-          <Technologies techs={techs} />
+          <Technologies />
           <Projects projects={projects} />
 
           <Footer/>

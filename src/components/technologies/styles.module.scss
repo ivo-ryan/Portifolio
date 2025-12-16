@@ -1,115 +1,46 @@
-@use "../../app/colors.module.scss" as * ;
+@use "../../app/colors.module.scss" as *;
 
-.sectionContainer{
-    padding: 30px 20px ;
+.tech {
+  padding: 3rem 2rem ;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  background-color: $bgColor;
 }
 
-.titlePage{
-    margin-bottom: 40px;
+.techGroup {
+  margin-bottom: 2.5rem;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #a1a1aa; // cinza suave
+    font-weight: 500;
+  }
 }
 
-.containerTechs{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px , 1fr));
-    gap: 10px;
-    flex-wrap: wrap;
-}
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 
+  span {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+    cursor: pointer;
 
-.card{
-    height: 280px;
-    padding: 14px ;
-    display: flex ;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    transition: .5s ease;
-    
     &:hover {
-        transform: scale(1.03);
-        .cardTitle {
-            font-size: 18px;
-            margin-left: 8px;
-        }
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
     }
-
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, #111, transparent);
-        border-radius: 8px;
-        z-index: -1;
-        pointer-events: none; 
-    }
-    
-}
-
-
-.imgBackground{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
-    border-radius: 8px;
-    top: 0;
-    left: 0;
-}
-
-
-.title{
-        font-weight: bold;
-        font-size: 30px;
-        padding-bottom: 40px;
-    }
-
-
-.description{
-    font-size: 15px;
-    font-weight: 400;
-    color: $colorText;
-}
-
-
-@media (max-width: 500px) {
-    .containerTechs{
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    }
-
-    .card{
-        height: 200px;
-        justify-content: flex-start;
-
-        &::after{
-            background: linear-gradient(to top, #111, #1111116e, transparent);
-        }
-    }
-
-    .title{
-        font-size: 20px;
-        padding-bottom: 25px;
-    }
-
-    .description{
-        display: none;
-    }
-}
-
-@media (max-width: 350px){
-    .containerTechs{
-        gap:5px;
-    }
-    .title{
-        padding-bottom: 15px;
-    }
-}
-
-@media (max-width: 320px){
-
-    .containerTechs{
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    }
+  }
 }

@@ -1,5 +1,5 @@
 
-import axios from "axios";
+import { api } from "./api";
 
 export type ProjectsProps = {
     id: number;
@@ -13,7 +13,7 @@ export type ProjectsProps = {
 
 export const projectsService = {
     projectsAll: async () => {
-        const req = await  axios.get("https://portifolio-api-rp50.onrender.com/api/projects");
+        const req = await  api.get("projects");
         const res = req.data;
         return res
     }

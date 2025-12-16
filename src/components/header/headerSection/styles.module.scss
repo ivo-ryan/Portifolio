@@ -34,7 +34,7 @@
     width: 600px;
     padding-top: 1rem;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;
     border: 1px solid $colorAccent;
 }
 
@@ -160,6 +160,10 @@
 @media (max-width: 500px) {
     .headerSection{
         padding-top: 25%;
+    }
+
+    .arrow{
+        margin-top: 1rem;
     }
 
     .headerTitle{
