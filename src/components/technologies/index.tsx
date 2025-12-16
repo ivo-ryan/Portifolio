@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 export default function Technologies() {
 
     return (
-        <section className={styles.tech} >
+        <section className={styles.tech} > 
             <h2>Tecnologias</h2>
 
             <div className={styles.techGroup}>
