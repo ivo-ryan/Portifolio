@@ -24,13 +24,16 @@ export default  function Projects ({ projects }: props ){
 
             <div className={styles.containerSlides}>
 
-                <Swiper
-                modules={[Navigation]}
-                navigation
-                pagination={{ clickable: true }}
-                spaceBetween={16}
-                slidesPerView={1}  
-                loop={true}                                          
+               <Swiper
+                    modules={[Navigation, Pagination]}
+                    navigation={false}
+                    pagination={{ clickable: true }}
+                    loop
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    breakpoints={{
+                        600: {slidesPerView: 2, navigation: true}
+                    }}
                 >
 
                     {

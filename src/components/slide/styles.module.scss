@@ -10,36 +10,26 @@
     @extend .displayF;
     flex-direction: column;
     gap: 20px;
-    width: 90%;
-    height: 350px;
+    padding: 20px 0;
+    width: 100%;
     border: 1px solid $secondBgColor;
-    background-color: $bgColor;
+    background-color: #15151571;
     transition: 0.4s;
+    border-radius: 5px;
     cursor: pointer;
-    margin-left: 70px;
-}
-
-.title {
-  color: white;
-  font-weight: bold;
-  padding: 8px 16px;
-}
-.description {
-  font-size: 14px;
-  padding: 0px 16px;
-  color: $colorText;
 }
 
 .containerImg{
   @extend .displayF;
-    width: 500px;
-    height: 250px;
+    width: 80%;
+    height: 280px;
     filter: drop-shadow(0 0 4px #111);
 }
 
 .slideImg{
+  padding-top: 10px;
     width: 100%;
-    height: 250px;
+    height: 280px;
     img {
   -webkit-user-drag: none;   
   user-select: none;       
@@ -51,105 +41,111 @@
 
 .container{
   @extend .displayF;
-  gap: 20px
+  flex-direction: column;
+  gap: 10px
 }
 
 .containerInfo{
-  @extend .displayF;
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  background-color: #15151571;
   padding: 20px 0;
-  height: 250px;
+  height: 280px;
   gap: 20px;
-  width: 40%;
-  box-shadow: (0 0 4px #111);
-}
+  width: 80%;
 
-.btn{
-    @extend .displayF;
-    gap: 5px;
-    width: 110px;
-    text-decoration: none;
-    padding: 8px 14px;
-    font-weight: 600;
-    border-radius: 5px;
-    color: $colorText;
-    transition: .5s ease;
-    text-decoration: none;
-     background-color: #181717;
-    border: 1px solid #fff;
-
-    &:hover{
-        background-color: #fff;
-        color: #181717;
+  .title {
+      color: white;
+      font-weight: bold;
+      padding: 0;
+    }
+  .description {
+      font-size: 14px;
+      color: $colorText;
     }
 
-    svg{
-        font-size: 20px;
-    }
-}
-
-.techs{
-  @extend .displayF;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 16px;
-
-  span{
-    color: $colorPrimary ;
-  }
-}
-
-.links{
-  @extend .displayF;
-  justify-content: flex-end;
-  width: 63%;
-  gap: 20px
-}
-
-.github{
-    @extend .btn;
-
-    
-}
-
-.vercel{
-  @extend .btn;
+  .btn{
+      @extend .displayF;
+      gap: 5px;
+      width: 110px;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: 600;
+      border-radius: 5px;
+      color: $colorText;
+      transition: .5s ease;
+      text-decoration: none;
+       background-color: #181717;
+      border: 1px solid #fff;
   
-  svg{
+      &:hover{
+          background-color: #fff;
+          color: #181717;
+      }
+  
+      svg{
+          font-size: 20px;
+      }
+  }
+  
+  .techs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
 
-    transform: rotate(-90deg);
+    span{
+      font-weight: 500;
+      color: $colorText ;
+    }
+  }
+  
+  .links{
+    @extend .displayF;
+    width: 90%;
+    justify-content: space-around;
+    gap: 20px
+  }
+  
+  .github{
+      @extend .btn;      
+  }
+  
+  .vercel{
+    @extend .btn;
+    
+    svg{
+  
+      transform: rotate(-90deg);
+    }
   }
 }
+
 
 @media (max-width: 1200px) {
   .containerProject{
-    margin-left: 50px;
     padding: 0 10px;
   }
-
   .containerImg{
-    width: 400px;
+    width: 90%;
+    padding: 10px 0;
   }
   .links{
     width: 75%;
   }
 
   .containerInfo{
-    padding: 10px 0;
-    width: 350px;
-  }
-  .title{
-    font-size: 20px;
+    width: 90%;
+    .title{
+      font-size: 20px;
+    }
   }
 }
 
 @media (max-width: 1000px){
   .containerProject{
     padding: 10px 0;
-    margin-left: 90px;
-    height: 460px;
-    width: 70%;
     border-radius: 5px;
   }
 
@@ -167,86 +163,71 @@
   }
 
   .containerInfo{
-    width: 95%;
-    height: 190px;
-    gap: 8px;
-  }
-
-  .title{
-    font-size: 18px;
-  }
-
-  .description{
-    font-size: 14px;
-  }
-
-  .links{
-    justify-content: center;
     width: 100%;
-    margin: 5px 0;
-  }
-  .techs {
-    p{
+    padding: 5px 16px;
+    gap: 8px;
+    .title{
+      font-size: 18px;
+    }
+  
+    .description{
       font-size: 14px;
-      padding: 5px 0;
+    }
+  
+    .links{
+      justify-content: center;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .techs {
+      p{
+        font-size: 14px;
+        padding: 5px 0;
+      }
     }
   }
-}
 
-
-@media (max-width: 500px) {
-  .containerProject{
-    margin-left: 20px;
-    width: 90%;
-  }
-
-  .containerImg{
-    width: 98%;
-  }
-  
 }
 
 @media (max-width: 400px) {
   .containerProject{
-    margin-left: 15px;
     font-weight: 500;
-  }
-
-  .slideImg{
-    height: 160px;
+    width: 100%;
+    margin: 0;
   }
 
   .containerInfo{
-    height: 200px;
+    justify-content: center;
+      .title{
+        font-size: 16px;
+      }
+
+      .description{
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      .techs{
+
+        span{
+          font-size: 14px;
+        }
+        
+        p{
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      
+      .btn{
+        padding: 5px;
+        font-size: 14px;
+
+        svg{
+          font-size: 15px; 
+        }
+      }
   }
 
-  .title{
-    font-size: 16px;
-  }
 
-  .description{
-    font-size: 13px;
-    font-weight: 300;
-  }
-
-  .techs{
-
-    span{
-      font-size: 14px;
-    }
-     
-    p{
-      font-size: 12px;
-      font-weight: 400;
-    }
-  }
-  
-  .btn{
-    padding: 5px;
-    font-size: 14px;
-
-    svg{
-      font-size: 15px;
-    }
-  }
 }

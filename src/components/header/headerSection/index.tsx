@@ -8,9 +8,9 @@ export default function HeaderSection (){
             <div className={styles.headerSection}>
                 <div className={styles.headerTitle}>
                     <h2 className={styles.subTitle}>Quem sou eu</h2>
-                    <h1 className={styles.title} >Desenvolvedor Full Stack JavaScript</h1>
+                    <h1 className={styles.title} >Desenvolvedor Frontend (React / Next.js) com base Full Stack</h1>
                     <p className={styles.description}>
-                        Desenvolvedor Full Stack focado em aplicações web modernas.
+                        Desenvolvedor Front End focado em aplicações web modernas.
                         Experiência prática com React, Next.js, Node.js, PostgreSQL e testes automatizados.
                     </p>  
                     <div className={styles.containerContact}>

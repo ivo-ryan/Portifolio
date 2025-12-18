@@ -1,54 +1,126 @@
 @use "../../../app/colors.module.scss" as *;
 
-.container{
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 20px;
+  background-color: #111;
+}
+
+
+.logoContainer {
+  width: 200px;
+}
+
+.title {
+  font-size: 1.5rem;
+
+  span {
+    color: $mainColor;
+    filter: drop-shadow(0 0 4px $mainColor);
+  }
+}
+
+
+.nav {
+  display: flex;
+}
+
+.navContainer {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+
+  li {
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+}
+
+.btn {
+  a {
+    text-decoration: none;
+    color: $colorText;
+    transition: color 0.3s ease;
+  }
+
+  &:hover a {
+    border-bottom: 1px solid $mainColor;
+  }
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+
+  span {
+    width: 26px;
+    height: 2px;
+    background-color: $colorText;
+    transition: 0.3s ease;
+  }
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+  }
+
+  .nav {
     position: fixed;
-    z-index: 2;
-    padding: 20px;
+    height: 50%;
+    inset: 0;
     background-color: #111;
-}
-
-.navContainer{
     display: flex;
-    gap: 20px;
-    list-style: none;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+  }
 
-        li{
-            padding: 5px 8px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: .5s ease;
+  .nav.open {
+    transform: translateX(0);
+  }
 
-        }
+  .navContainer {
+    flex-direction: column;
+    gap: 32px;
+    font-size: 1.4rem;
+  }
 }
 
-.btn{
-    a{
-        text-decoration: none;
-        color: $colorText;
+@media (max-width: 500px) {
+    .nav{
+        height: 30%;
     }
-
-   &:hover{
-        a{
-            color: #594DCC;
-        }
+    .navContainer {
+        font-size: 16px;
     }
-
-
-}
-
-
-.title{
-    span{
-        color: $mainColor;
-        filter: drop-shadow(0 0 4px $mainColor);
-    }
-}
-
-.logoContainer{
-    width: 200px;
-
 }

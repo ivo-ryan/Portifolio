@@ -25,26 +25,27 @@ export default function Slide ({ project }:props) {
 
                     <div className={styles.containerInfo}>
                         <h2 className={styles.title}>{project.name}</h2>
-                    <p className={styles.description}>{limitarTexto(project.description, 150)}</p>
-                    <div className={styles.techs}>
-                        <span>Tecnologias utilizadas:</span>
-                        <p>{project.technologies}</p>
-                    </div>
+                        <p className={styles.description}>{project.description}</p>
+                        <div className={styles.techs}>
+                            <span>Tecnologias utilizadas:</span>
+                            <p>{project.technologies}</p>
+                        </div>
+
+                        <div className={styles.links}>
+
+                            <Link href={project.vercelUrl} className={styles.vercel} target="_blank" >
+                            <FaPlay/>
+                            Vercel
+                            </Link>
+
+                            <Link href={project.gitUrl} className={styles.github} target="_blank" >
+                                    <FaGithub/>
+                                    GitHub
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
-                <div className={styles.links}>
-
-                    <Link href={project.vercelUrl} className={styles.vercel} target="_blank" >
-                       <FaPlay/>
-                       Vercel
-                    </Link>
-
-                    <Link href={project.gitUrl} className={styles.github} target="_blank" >
-                            <FaGithub/>
-                            GitHub
-                    </Link>
-                </div>
             </div>
     )
 }

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 5%;
+    padding-top: 12%;
 }
 
 .headerTitle{
@@ -42,61 +42,61 @@
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.btn{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    padding: 8px 14px;
-    font-weight: 600;
-    border-radius: 5px;
-    color: $colorText;
-    transition: .5s ease;
-    text-decoration: none;
-
-    svg{
-        font-size: 20px;
-    }
-}
-
-.btnLinkedin{
-    @extend .btn;
-    background-color: #0A66C2;
-
-    &:hover{
-        background-color: #004182;
+    
+    .btn{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        padding: 8px 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        color: $colorText;
+        transition: .5s ease;
+        text-decoration: none;
+    
+        svg{
+            font-size: 20px;
+        }
     }
     
-}
-
-.btnWhatsapp{
-    @extend .btn;
-    background-color: #16A34A;
-
-    &:hover{
-        background-color: #15803D;
+    .btnLinkedin{
+        @extend .btn;
+        background-color: #0A66C2;
+    
+        &:hover{
+            background-color: #004182;
+        }
+        
     }
     
-}
-
-.btnGithub{
-    @extend .btn;
-    background-color: #181717;
-    border: 1px solid #fff;
-
-    &:hover{
-        background-color: #fff;
-        color: #181717;
+    .btnWhatsapp{
+        @extend .btn;
+        background-color: #16A34A;
+    
+        &:hover{
+            background-color: #15803D;
+        }
+        
     }
     
-}
-.btnCv {
-    @extend .btn ;
-    background-color: #2563EB;
-    &:hover{
-        background-color: #1E40AF ;
+    .btnGithub{
+        @extend .btn;
+        background-color: #181717;
+        border: 1px solid #fff;
+    
+        &:hover{
+            background-color: #fff;
+            color: #181717;
+        }
+        
+    }
+    .btnCv {
+        @extend .btn ;
+        background-color: #2563EB;
+        &:hover{
+            background-color: #1E40AF ;
+        }
     }
 }
 
@@ -118,7 +118,7 @@
 
 @media (max-width: 1200px) {
     .imgPresentation{
-        width: 300px;
+        width: 400px;
     }
     .headerTitle{
         width: 40%;
@@ -153,13 +153,18 @@
     }
 
     .imgPresentation{
-        width: 90%;
+        width: 60%;
     }
 }
 
 @media (max-width: 500px) {
     .headerSection{
         padding-top: 25%;
+    }
+    .containerContact{
+        .btn{
+            width: 130px;
+        }
     }
 
     .arrow{

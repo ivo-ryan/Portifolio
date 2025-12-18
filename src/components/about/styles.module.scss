@@ -1,13 +1,18 @@
 @use "../../app/colors.module.scss" as *;
 
 .containerSection{
-    scroll-margin-top: 100px; 
-    padding:2rem;
+    scroll-margin-top: 75px; 
+    padding: 0 2rem;
     min-height: 400px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(to bottom , #000 , #333, transparent);
+    background: linear-gradient(
+    135deg,
+    $bgColor 0%,
+    $secondBgColor 100%
+    );
+
     gap: 20px;
 
     h2{
@@ -18,8 +23,8 @@
     p{
         width: 60%;
         line-height: 25px;
-        font-weight: 600;
-        font-size: 17px;
+        font-weight: 400;
+        font-size: 20px;
     }
 
     strong {
@@ -30,6 +35,21 @@
         p{
             width: 80%;
             text-align: justify;
+        }
+    }
+
+    @media  (max-width: 500px) {
+        p{
+            width: 100%;
+            font-size: 17px;
+        }
+        
+    }
+
+    @media (max-width: 375px) {
+        padding: 1rem 2rem;
+        p{
+            font-size: 15px;
         }
     }
 
