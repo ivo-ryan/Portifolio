@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "axios": "^1.11.0",
@@ -20,11 +22,15 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "typescript": "^5"
+    "jsdom": "^27.3.0",
+    "typescript": "^5",
+    "vitest": "^4.0.16"
   }
 }

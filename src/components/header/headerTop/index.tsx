@@ -7,11 +7,11 @@ import styles from "./styles.module.scss";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function toggleMenu() {
+  const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   }
 
-  function closeMenu() {
+  const closeMenu = () => {
     setMenuOpen(false);
   }
 
