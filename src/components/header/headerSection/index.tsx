@@ -41,7 +41,7 @@ export default function HeaderSection (){
                             GitHub
                         </Link>
 
-                        <Link className={styles.btnCv}  href="/curriculo-ivo-ryan.pdf"
+                        <Link className={styles.btnCv}  href="/curriculo-front.pdf"
                             download
                             target="_blank"
                             rel="noopener noreferrer"
