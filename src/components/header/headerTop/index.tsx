@@ -38,7 +38,7 @@ export default function Header() {
           <li className={styles.btn}>
             <Link href="#header" onClick={closeMenu}>
               Home
-            </Link>
+            </Link> 
           </li>
           <li className={styles.btn}>
             <Link href="#projetos" onClick={closeMenu}>
