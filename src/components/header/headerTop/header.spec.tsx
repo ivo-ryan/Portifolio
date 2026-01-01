@@ -9,9 +9,9 @@ describe("Header Top Component", () => {
         render(<Header />);
         const title = screen.getByRole("heading", { name: /IR\.DEV/i });
         const button = screen.getByLabelText("Abrir menu");
-        const homeLink = screen.getByRole("link", { name: /home/i });
-        const projetosLink = screen.getByRole("link", { name: /projetos/i });
-        const aboutLink = screen.getByRole("link", { name: /about/i });
+        const homeLink = screen.getByRole("link", { name: /home/i , hidden: true});
+        const projetosLink = screen.getByRole("link", { name: /projetos/i , hidden: true});
+        const aboutLink = screen.getByRole("link", { name: /about/i , hidden: true});
         
         expect(homeLink).toBeInTheDocument();
         expect(projetosLink).toBeInTheDocument();
@@ -26,12 +26,14 @@ describe("Header Top Component", () => {
 
         const user = userEvent.setup();
 
-        const nav = screen.getByRole("navigation");
+        const nav = screen.getByRole("navigation", { hidden: true });
         const button = screen.getByLabelText("Abrir menu");
-        expect(nav).not.toBeVisible();
-    //   erro bem aqui o tobeVisible não funciona pois o nav não fica com o display none
+
+        expect(nav).toHaveAttribute("aria-hidden", "true");
+
         await user.click(button);
 
-        expect(nav).toBeVisible();
+        expect(nav).toHaveAttribute("aria-hidden", "false");
+
     });
 });

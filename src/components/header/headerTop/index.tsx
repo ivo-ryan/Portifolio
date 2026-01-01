@@ -27,13 +27,14 @@ export default function Header() {
         className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}
         onClick={toggleMenu}
         aria-label="Abrir menu"
+        aria-expanded={menuOpen}
       >
         <span />
         <span />
         <span />
       </button>
 
-      <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
+      <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`} role="navigation" aria-hidden={!menuOpen}>
         <ul className={styles.navContainer}>
           <li className={styles.btn}>
             <Link href="#header" onClick={closeMenu}>

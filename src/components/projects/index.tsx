@@ -16,7 +16,6 @@ interface props  {
 
 export default  function Projects ({ projects }: props ){
     
-
     return (
         <section className={styles.sectionContainer} id="projetos" >
 
@@ -26,13 +25,13 @@ export default  function Projects ({ projects }: props ){
 
                <Swiper
                     modules={[Navigation, Pagination]}
-                    navigation={false}
                     pagination={{ clickable: true }}
+                    navigation={true}
                     loop
                     slidesPerView={1}
                     spaceBetween={20}
                     breakpoints={{
-                        600: {slidesPerView: 2, navigation: true}
+                        600: {slidesPerView: 2}
                     }}
                 >
 

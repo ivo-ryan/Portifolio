@@ -10,10 +10,6 @@ interface props  {
 
 export default function Slide ({ project }:props) {
 
-    const limitarTexto = (texto: string, limite : number) => {
-    return texto.length > limite ? texto.substring(0, limite) + "..." : texto;
-    }
-
     return (
 
             <div className={styles.containerProject} >
