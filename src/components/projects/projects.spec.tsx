@@ -41,10 +41,10 @@ const mockProjects = [
 
 describe("Projects Component", () => {
 
-    it("Deve renderizar o titulo da seção de projetos", () => {
+    it("Deve renderizar a mensagem de projetos não encontrados", () => {
         render(<Projects projects={[]} />);
-        const title = screen.getByRole("heading", { name: /projetos/i });
-        expect(title).toBeInTheDocument();
+        const paragraph = screen.getByText(/projetos não encontrados!/i);
+        expect(paragraph).toBeInTheDocument();
     });
 
     it("Deve renderizar os slides dos projetos", () => {

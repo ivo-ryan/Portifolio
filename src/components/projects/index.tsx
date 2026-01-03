@@ -15,6 +15,8 @@ interface props  {
 }
 
 export default  function Projects ({ projects }: props ){
+
+    if(!projects || projects.length === 0) return <p>Projetos não encontrados!</p>
     
     return (
         <section className={styles.sectionContainer} id="projetos" >

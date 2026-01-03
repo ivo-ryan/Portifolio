@@ -13,8 +13,10 @@ export type ProjectsProps = {
 
 export const projectsService = {
     projectsAll: async () => {
-        const req = await  api.get("projects");
-        const res = req.data;
-        return res
+        const res = await  api.get("projects").catch((error) => {
+            if(error) console.log(error.response.data.message);
+            return error.response
+        });
+        return res.data
     }
 }
