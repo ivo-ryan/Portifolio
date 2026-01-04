@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-around;
     padding-top: 12%;
+    background-image: linear-gradient(to bottom, #111, #111, #111, transparent);
 }
 
 .headerTitle{
@@ -116,6 +117,7 @@
     }
 }
 
+
 @media (max-width: 1200px) {
     .imgPresentation{
         width: 400px;
@@ -146,6 +148,11 @@
         flex-direction: column;
         gap: 20px;
         padding-top: 14%;
+        background-image: linear-gradient(to bottom, #111, #111, transparent);
+    }
+
+    .arrow{
+        margin-top: 1rem;
     }
 
     .headerTitle{

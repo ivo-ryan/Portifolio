@@ -6,6 +6,7 @@ export default function HeaderSection (){
     return (
         <>
             <div className={styles.headerSection}>
+
                 <div className={styles.headerTitle}>
                     <h2 className={styles.subTitle}>Quem sou eu</h2>
                     <h1 className={styles.title} >Desenvolvedor Frontend (React / Next.js) com base Full Stack</h1>

@@ -2,6 +2,7 @@
 
 .containerSection{
     scroll-margin-top: 75px; 
+    margin-top: 20px;
     padding: 0 2rem;
     min-height: 400px;
     display: flex;
@@ -31,7 +32,12 @@
         color: #e5e7eb;
         }
 
+    @media (max-width: 1024px) {
+        margin-top: 50px;
+    }
+
     @media (max-width: 768px) {
+        margin-top: 0;
         p{
             width: 80%;
             text-align: justify;

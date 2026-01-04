@@ -15,10 +15,10 @@ export default async function Home() {
     <>
       <main className={styles.mainBackground}>
           <div className={styles.containerHeader}>
-            <Header />
             <video src="/video.mp4" autoPlay muted loop className={styles.videoBackground}></video>
-            <HeaderSection/>          
           </div>
+            <Header />
+            <HeaderSection/>          
 
           <About/>
           <Technologies />
