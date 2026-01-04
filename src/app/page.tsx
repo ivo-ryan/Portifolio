@@ -14,9 +14,9 @@ export default async function Home() {
   return (
     <>
       <main className={styles.mainBackground}>
-          <div className={styles.containerHeader}>
+
             <video src="/video.mp4" autoPlay muted loop className={styles.videoBackground}></video>
-          </div>
+
             <Header />
             <HeaderSection/>          
 
