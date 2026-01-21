@@ -9,6 +9,7 @@ export type ProjectsProps = {
     vercelUrl:string;
     technologies: string;
     gitUrl: string;
+    features: string;
 }
 
 export const projectsService = {
@@ -18,5 +19,16 @@ export const projectsService = {
             return error.response
         });
         return res.data
+    },
+
+    iaAnalysis: async (feature:string) => {
+        const res = await api.post("chat", {
+            prompt: feature
+        }).catch((error) => {
+            if(error) console.log(error.response.data.message);
+            return error.response
+        });
+
+        return res.data 
     }
 }

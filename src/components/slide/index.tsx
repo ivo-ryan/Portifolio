@@ -1,10 +1,10 @@
 import { ProjectsProps } from "@/services/projectsService";
 import styles from "./styles.module.scss";
-import Link from "next/link";
-import { FaGithub, FaPlay } from "react-icons/fa";
+import AnaliseTecnica from "../analiseTecnica";
+import { motion } from "framer-motion";
 
 interface props  {
-    project: ProjectsProps
+    project: ProjectsProps;
 }
 
 
@@ -27,18 +27,7 @@ export default function Slide ({ project }:props) {
                             <p>{project.technologies}</p>
                         </div>
 
-                        <div className={styles.links}>
-
-                            <Link href={project.vercelUrl} className={styles.vercel} target="_blank" >
-                            <FaPlay/>
-                            Vercel
-                            </Link>
-
-                            <Link href={project.gitUrl} className={styles.github} target="_blank" >
-                                    <FaGithub/>
-                                    GitHub
-                            </Link>
-                        </div>
+                            <AnaliseTecnica {...project} />
                     </div>
                 </div>
 

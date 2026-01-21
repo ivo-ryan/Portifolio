@@ -16,7 +16,8 @@ const mockProjects = [
         name: "Projeto Teste 1",
         vercelUrl:"https://projetoteste1.vercel.app",
         technologies: "React, TypeScript",
-        gitUrl: "https://github.com/projetoteste1"
+        gitUrl: "https://github.com/projetoteste1",
+        features: "feature de teste "
     }, 
     {
         id: 2,
@@ -25,7 +26,8 @@ const mockProjects = [
         name: "Projeto Teste 2",
         vercelUrl:"https://projetoteste2.vercel.app",
         technologies: "React, TypeScript",
-        gitUrl: "https://github.com/projetoteste2"
+        gitUrl: "https://github.com/projetoteste2",
+        features: "feature de teste "
     },
 
     {
@@ -35,7 +37,8 @@ const mockProjects = [
         name: "Projeto Teste 3",
         vercelUrl:"https://projetoteste3.vercel.app",
         technologies: "React, TypeScript",
-        gitUrl: "https://github.com/projetoteste3"
+        gitUrl: "https://github.com/projetoteste3",
+        features: "feature de teste "
     }
 ]
 
@@ -56,4 +59,5 @@ describe("Projects Component", () => {
         expect(project2).toBeInTheDocument();
         expect(project3).toBeInTheDocument();
     });
+    
 });

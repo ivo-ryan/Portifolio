@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { ProjectsProps } from "@/services/projectsService";
 import Slide from "../slide";
+import { motion } from "framer-motion";
 
 
 interface props  {
@@ -28,12 +29,12 @@ export default  function Projects ({ projects }: props ){
                <Swiper
                     modules={[Navigation, Pagination]}
                     pagination={{ clickable: true }}
-                    navigation={true}
+                    navigation={false}
                     loop
                     slidesPerView={1}
                     spaceBetween={20}
                     breakpoints={{
-                        600: {slidesPerView: 2}
+                        600: {slidesPerView: 2, navigation: true}
                     }}
                 >
 
@@ -41,7 +42,15 @@ export default  function Projects ({ projects }: props ){
 
                         projects?.map((item , index) => (
                             <SwiperSlide key={index} >
-                                <Slide project={item} />
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    viewport={{ once: true }}
+                                    >
+
+                                    <Slide project={item} />
+                                </motion.div>
                             </SwiperSlide>
                         ))
 

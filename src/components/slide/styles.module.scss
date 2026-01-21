@@ -8,6 +8,7 @@
 
 .containerProject{
     @extend .displayF;
+    position: relative;
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
@@ -63,30 +64,6 @@
       font-size: 14px;
       color: $colorText;
     }
-
-  .btn{
-      @extend .displayF;
-      gap: 5px;
-      width: 110px;
-      text-decoration: none;
-      padding: 8px 14px;
-      font-weight: 600;
-      border-radius: 5px;
-      color: $colorText;
-      transition: .5s ease;
-      text-decoration: none;
-       background-color: #181717;
-      border: 1px solid #fff;
-  
-      &:hover{
-          background-color: #fff;
-          color: #181717;
-      }
-  
-      svg{
-          font-size: 20px;
-      }
-  }
   
   .techs{
     display: flex;
@@ -101,25 +78,7 @@
     }
   }
   
-  .links{
-    @extend .displayF;
-    width: 90%;
-    justify-content: space-around;
-    gap: 20px
-  }
-  
-  .github{
-      @extend .btn;      
-  }
-  
-  .vercel{
-    @extend .btn;
-    
-    svg{
-  
-      transform: rotate(-90deg);
-    }
-  }
+ 
 }
 
 
@@ -137,6 +96,7 @@
 
   .containerInfo{
     width: 90%;
+    height: 320px ;
     .title{
       font-size: 20px;
     }
@@ -156,6 +116,7 @@
 
   .containerImg{
     height: 180px;
+    width: 80%;
   }
 
   .slideImg{
@@ -163,8 +124,9 @@
   }
 
   .containerInfo{
-    width: 100%;
-    padding: 5px 16px;
+    width: 90%;
+    height: 330px;
+    padding: 5px;
     gap: 8px;
     .title{
       font-size: 18px;
@@ -230,4 +192,15 @@
   }
 
 
+}
+
+@media (max-width: 350px) {
+    .containerImg{
+    width: 90%;
+  }
+
+  .containerInfo{
+    width: 100%;
+    padding: 5px 16px;
+  }
 }
