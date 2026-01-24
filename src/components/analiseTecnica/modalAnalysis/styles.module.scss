@@ -10,11 +10,11 @@
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 5%;
   width: 90%;
   max-width: 600px;
-  max-height: 45vh;
+  max-height: 38vh;
 
   background-color: #0f172a;
   border-radius: 12px;
@@ -97,6 +97,12 @@
     }
 }
 
+}
+
+@media (max-width: 1450px) {
+  .modal{
+    max-height: 50vh;
+  }
 }
 
 @media (max-width: 768px) {
