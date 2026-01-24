@@ -10,12 +10,17 @@ export default function useAnalysis () {
 
     useEffect(() => {
         const fecthData = async () => {
-          if(!feature) return 
+          if(!feature ) return 
           try{            
             setLoading(true);
               const res = await projectsService.iaAnalysis(feature);
               setAnalysisRes(res.answer);
-          }finally{
+          }catch(err){
+            setFeature(null);
+            setAnalysisRes('Erro ao gerar análise técnica. Tente novamente mais tarde.');
+            console.log(err);
+          }
+          finally{
             setLoading(false);
           }
         }

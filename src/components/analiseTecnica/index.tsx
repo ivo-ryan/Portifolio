@@ -10,10 +10,9 @@ type projectProps = {
     features: string;
     gitUrl: string;
     vercelUrl: string;
-    id: number;
 }
 
-export default function AnaliseTecnica ({features, gitUrl, vercelUrl, id}:projectProps){
+export default function AnaliseTecnica ({features, gitUrl, vercelUrl}:projectProps){
     const { analysisRes, loading, setFeature } = useAnalysis();
     const [ isOpen, setIsOpen ] = useState<boolean>(false);
 
@@ -36,7 +35,7 @@ export default function AnaliseTecnica ({features, gitUrl, vercelUrl, id}:projec
                         Análise Técnica
                     </p>
 
-                    <AiAnalysisModal content={analysisRes} isOpen={isOpen} loading={loading} onClose={() => setIsOpen(false)} />
+                    <AiAnalysisModal  content={analysisRes} isOpen={isOpen} loading={loading} onClose={() => setIsOpen(false)} />
                 </div>
 
 

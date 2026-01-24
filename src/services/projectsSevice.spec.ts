@@ -4,9 +4,13 @@ import { api } from "./api";
 
 vi.mock("./api", () => ({
   api: {
-      get: vi.fn()
+      get: vi.fn(),
+      post: vi.fn()
   }
 }));
+
+const apiMockedGet = vi.mocked(api.get);
+const apiMockedPost = vi.mocked(api.post);
 
 describe("projectsService", () => {
     it("Deve fazer a requisição para buscar projetos", async () => {
@@ -20,7 +24,7 @@ describe("projectsService", () => {
             gitUrl: "http://github.com/projeto-teste"
         };
 
-        (api.get as any).mockResolvedValueOnce({ data: [mockProjects] });
+        apiMockedGet.mockResolvedValueOnce({ data: [mockProjects] });
 
         const result = await projectsService.projectsAll();
 
@@ -39,7 +43,7 @@ describe("projectsService", () => {
             }
         };
 
-        (api.get as any).mockRejectedValueOnce(error);
+        apiMockedGet.mockRejectedValueOnce(error);
 
         const result = await projectsService.projectsAll();
 
@@ -47,4 +51,39 @@ describe("projectsService", () => {
         expect(result).toEqual(error.response.data);
 
     });
+
+    it("Deve enviar a feature e fazer a analise corretamente", async () => {
+        const feature = {
+            data: { answer: "Feature de teste" }
+        };
+
+        apiMockedPost.mockResolvedValueOnce(feature);
+
+        const result = await projectsService.iaAnalysis("Feature de teste");
+
+        expect(api.post).toHaveBeenCalledWith("chat", { prompt: "Feature de teste" });
+        expect(result).toEqual({
+            answer: "Feature de teste"
+        });
+    });
+
+    it("Deve retornar os dados do erro quando a requisição falhar" , async () => {
+        const error ={
+            response: {
+                data: {
+                    message: "Erro ao criar analise"
+                }
+            }
+        };
+
+        apiMockedPost.mockRejectedValueOnce(error);
+
+        const result = await projectsService.iaAnalysis("Feature de teste");
+        
+        expect(api.post).toHaveBeenCalledWith("chat", { prompt: "Feature de teste" });
+        expect(result).toEqual({
+            message: "Erro ao criar analise"
+        });
+        
+    } );
 });
